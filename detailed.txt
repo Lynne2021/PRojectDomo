@@ -1,0 +1,67 @@
+1 main.Employee class
+	a five instance variable with get/set method
+		int empNo;
+		String firstName;
+		String lastName;
+		double hourRate;
+		double timeWorked;  //save total hours
+	b default constructor and constructor with variables 
+	c format time worked method
+		convert timeWorked to HH:MM:SS and return back
+	d toString method
+2 Time Stamp class
+	a two instance variable with get/set method
+		int empNo;
+		String timeStamp;
+	b default constructor and constructor with variables 
+	d toString method
+3 generateEmployeeListFromFile
+	input: ArrayList employeeList, String fileName
+	output: boolean
+	description: read data from employee.txt one by one;
+							 split one line and initialize main.Employee object;
+							 add employee object to list
+	
+	code: read employees.txt
+				loop
+						employee = employee (empNo,last name,first name, hour rate);
+						list.add(employee);
+				end;
+				return true;
+4 processTimeWorkedFile
+	input: ArrayList employeeList, String fileName
+	output: boolean
+	description: add time worked into employee list by employee no.
+	code: read employeesHours.txt
+				loop
+						main.TimeStamp = main.TimeStamp (empNo,time worked);
+						call function addTimeWorkedToEmployee(employeelist, empNo, main.TimeStamp)
+				end;
+				return true;
+5 addTimeWorkedToEmployee
+	input: ArrayList<main.Employee> employeeList, int employeeNumber,
+			main.TimeStamp timeWorked
+	output: boolean
+	description: add time worked into employee
+	code: loop employee list
+						if employee.empno equal employeeNumber
+								employee.timeworked = employee.timeworked + timeWorked
+				end;
+				return true;
+6 getFormatTotalTime
+	input: double totalTime
+	output: String, formatted String HH:MM:SS
+7 printReport
+	input: ArrayList employeeList, String fileName
+	output: boolean
+	description: write details in employee into console and specified txt file
+	code: create file
+				loop employee list
+					write empno, last name,first name, time worked, hour rate and pay into file
+					write empno, last name,first name, time worked, hour rate and pay into screen
+				end;
+				calculate total worked time, write to screen and file
+				calculate total pay, write to screen and file
+				return true;
+	
+

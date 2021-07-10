@@ -1,0 +1,16 @@
+Emp# LastName FirstName TimeWorked Hourly Wage Pay
+5342 Peters Peter 35:41:00 $16.0 $571.2
+1964 Valentina Tereshkova 33:11:00 $77.77 $2580.67
+1885 Hugo Boss 25:29:00 $65.5 $1669.16
+1121 Smith Brian 18:14:00 $17.75 $323.64
+8343 Jones Nora 14:45:00 $15.0 $221.25
+2745 Brown Jane 13:43:00 $15.5 $212.61
+4231 White Allan 13:56:00 $19.0 $264.73
+2002 Clark Mary 11:58:00 $14.6 $174.71
+9223 Edwards Kim 6:0:00 $18.0 $108.0
+2341 Young Ann 2:10:00 $21.88 $47.77
+5566 Moss Peter 1:0:00 $13.45 $13.45
+
+
+Total time worked:176:9:00
+Total pay: $6187.19
