@@ -166,7 +166,6 @@ import java.util.Scanner;
          * */
         public static boolean addTimeWorkedToEmployee(ArrayList<Employee> employeeList, int employeeNumber,
                                                       TimeStamp timeWorked) {
-            //covert time to HH:MM:SS
             String[] arr = timeWorked.getTimeStamp().split(":");
             int seconds = Integer.parseInt(arr[0])* 60 * 60 + Integer.parseInt(arr[1])* 60 + Integer.parseInt(arr[2]);
             double hours = (double)seconds/(60*60);
@@ -184,6 +183,7 @@ import java.util.Scanner;
          * @return String
          *
          * */
+        //covert time to HH:MM:SS
         private static String getFormatTotalTime(double totalTime) {
             StringBuilder sb = new StringBuilder();
             int hours = (int) totalTime;
