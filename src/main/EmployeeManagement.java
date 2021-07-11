@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 /**
- * A test class what test the result for all classes in java.ca
+ * A test class  tests  all classes of results in java.class
  *
  * @author Hong lin, Xiaoming Su
  * @version 1.0
@@ -18,7 +18,7 @@ import java.util.Scanner;
          * Print out Menu
          */
         public static void main(String[] args) {
-
+          //create a new object of ArrayList
             ArrayList<Employee> empList = new ArrayList<Employee>();
             generateEmployeeListFromFile(empList, "./data/employees.txt");
             processTimeWorkedFile(empList, "./data/employeesHours.txt");
@@ -117,28 +117,31 @@ import java.util.Scanner;
          * */
         public static boolean printReport(ArrayList employeeList, String fileName) {
             try {
-                File file = new File(fileName);
-                PrintWriter writer = new PrintWriter(file);
+                File file = new File(fileName);//create a new object fill with parameter filename
+                PrintWriter writer = new PrintWriter(file);//create a new print writer object
                 writer.println("Emp# LastName FirstName TimeWorked Hourly Wage Pay");
                 System.out.println("Emp# LastName FirstName TimeWorked Hourly Wage Pay");
                 double totalTime = (double)0.0, totalPay = (double)0.0;
+                // for each loop
                 for (Object obj:employeeList) {
-                    Employee employee = (Employee)obj;
-                    double pay = employee.getHourRate()*employee.getTimeWorked();
+                    Employee employee = (Employee)obj;//cast object to Employee
+                    double pay = employee.getHourRate()*employee.getTimeWorked();//pay = hourRate* worked TIme
+                   //print to the console.
                     System.out.println(employee.getEmpNo() + " "
                             + employee.getLastName() + " "
                             + employee.getFirstName() + " "
                             + employee.getFormatTimeWorked()+ " "
                             + "$"+employee.getHourRate() + " "
                             + "$"+Math.round(pay*100.0)/100.0);
+                    //print to the fill.txt
                     writer.println(employee.getEmpNo() + " "
                             + employee.getLastName() + " "
                             + employee.getFirstName() + " "
                             + employee.getFormatTimeWorked()+ " "
                             + "$"+employee.getHourRate() + " "
                             + "$"+Math.round(pay*100.0)/100.0);
-                    totalTime+=employee.getTimeWorked();
-                    totalPay+=pay;
+                    totalTime+=employee.getTimeWorked();//all employees total work time.
+                    totalPay+=pay;// all employees total pay of salary.
                 }
                 System.out.println();
                 System.out.println();
