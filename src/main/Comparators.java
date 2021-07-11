@@ -1,6 +1,5 @@
 package main;
 import java.util.Comparator;
-
 /**
  *  Implementation the compare  by import util.java.comparator in java.class
  *
@@ -15,7 +14,6 @@ public class Comparators {
      */
     //Creat new Object for compare employee number.
     public static Comparator<Employee> NUMBER = new Comparator<Employee>() {
-
         @Override
         public int compare(Employee o1, Employee o2) {
             return o1.getEmpNo() - o2.getEmpNo();
@@ -23,7 +21,6 @@ public class Comparators {
     };
     //Creat new Object for compare employee name.
     public static Comparator<Employee> NAME = new Comparator<Employee>() {
-
         @Override
         public int compare(Employee o1, Employee o2) {
             return o1.getLastName().compareTo(o2.getLastName());
@@ -37,6 +34,7 @@ public class Comparators {
         }
     };
     //Creat new Object for compare employee pay.
+    // pay = employee hourRate * worked time.
     public static Comparator<Employee> PAY = new Comparator<Employee>() {
         @Override
         public int compare(Employee o1, Employee o2) {
