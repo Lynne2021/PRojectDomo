@@ -12,7 +12,7 @@ public class Employee {
     private String lastName;
     private double hourRate;
     private double timeWorked;  //save total hours
-
+    //
     public Employee() {
         super();
     }
@@ -47,9 +47,11 @@ public class Employee {
     public void setHourRate(double hourRate) {
         this.hourRate = hourRate;
     }
+    //method for get employee work time.
     public double getTimeWorked() {
         return timeWorked;
     }
+    //method for set employee work time.
     public void setTimeWorked(double timeWorked) {
         this.timeWorked = timeWorked;
     }
@@ -65,6 +67,7 @@ public class Employee {
                 .append(minutes).append(":00");
         return sb.toString();
     }
+    //override for employee number and name.
     @Override
     public String toString() {
         return "Employee [empNo=" + empNo + ", firstName=" + firstName + ", lastName=" + lastName + ", hourRate="
