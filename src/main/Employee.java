@@ -7,15 +7,17 @@ package main;
  * @since 2021-7-10
  */
 public class Employee {
+    //instance variable
     private int empNo;
     private String firstName;
     private String lastName;
     private double hourRate;
     private double timeWorked;  //save total hours
-    //
+    // default constructor
     public Employee() {
         super();
     }
+    // constructor with variables
     public Employee(int empNo, String lastName, String firstName, double hourRate) {
         super();
         this.empNo = empNo;
