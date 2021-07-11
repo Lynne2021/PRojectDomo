@@ -92,6 +92,7 @@ import java.util.Scanner;
             try {
                 File hoursFile = new File(fileName);
                 Scanner hoursTextRead = new Scanner(hoursFile);
+                //read data from file, fetch line one by one and write to list
                 while (hoursTextRead.hasNext()) {
                     String hoursStr = (String)hoursTextRead.next();
                     //split string by comma and convert into Array
