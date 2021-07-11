@@ -125,7 +125,7 @@ import java.util.Scanner;
                 // for each loop
                 for (Object obj:employeeList) {
                     Employee employee = (Employee)obj;//cast object to Employee
-                    double pay = employee.getHourRate()*employee.getTimeWorked();//pay = hourRate* worked TIme
+                    double pay = employee.getHourRate()*employee.getTimeWorked();//Calculate pay = hourRate* worked TIme
                    //print to the console.
                     System.out.println(employee.getEmpNo() + " "
                             + employee.getLastName() + " "
@@ -170,11 +170,12 @@ import java.util.Scanner;
         public static boolean addTimeWorkedToEmployee(ArrayList<Employee> employeeList, int employeeNumber,
                                                       TimeStamp timeWorked) {
             String[] arr = timeWorked.getTimeStamp().split(":");
+            //Calculate total seconds
             int seconds = Integer.parseInt(arr[0])* 60 * 60 + Integer.parseInt(arr[1])* 60 + Integer.parseInt(arr[2]);
-            double hours = (double)seconds/(60*60);
+            double hours = (double)seconds/(60*60);//Calculate hours , will get worked time with double type.
             for(Employee employee: employeeList) {
                 if (employee.getEmpNo() == employeeNumber) {
-                    employee.setTimeWorked(employee.getTimeWorked() + hours);
+                    employee.setTimeWorked(employee.getTimeWorked() + hours);//add the worked time into employee
                 }
             }
             return true;
