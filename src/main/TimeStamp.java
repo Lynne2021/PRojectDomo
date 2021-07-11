@@ -8,11 +8,14 @@ package main;
  * @since 2021-07-10
  */
 public class TimeStamp {
+    //instance variables
     private int empNo;
     private String timeStamp;
+    //default constructor
     public TimeStamp() {
         super();
     }
+    // constructor with variables
     public TimeStamp(int empNo, String timeStamp) {
         super();
         this.empNo = empNo;
@@ -30,6 +33,7 @@ public class TimeStamp {
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
     }
+    // override for employee number with the timeStamp.
     @Override
     public String toString() {
         return "TimeStamp [empNo=" + empNo + ", timeStamp=" + timeStamp + "]";
