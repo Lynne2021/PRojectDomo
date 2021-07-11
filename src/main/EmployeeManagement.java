@@ -117,7 +117,7 @@ import java.util.Scanner;
          * */
         public static boolean printReport(ArrayList employeeList, String fileName) {
             try {
-                File file = new File(fileName);//create a new object fill with parameter filename
+                File file = new File(fileName);//create a new object file constance
                 PrintWriter writer = new PrintWriter(file);//create a new print writer object
                 writer.println("Emp# LastName FirstName TimeWorked Hourly Wage Pay");
                 System.out.println("Emp# LastName FirstName TimeWorked Hourly Wage Pay");
@@ -143,10 +143,12 @@ import java.util.Scanner;
                     totalTime+=employee.getTimeWorked();//all employees total work time.
                     totalPay+=pay;// all employees total pay of salary.
                 }
+                //print to the console
                 System.out.println();
                 System.out.println();
                 System.out.println("Total time worked:"+getFormatTotalTime(totalTime));
                 System.out.println("Total pay: $"+Math.round(totalPay*100.0)/100.0);
+                //print to the file.txt
                 writer.println();
                 writer.println();
                 writer.println("Total time worked:"+getFormatTotalTime(totalTime));
