@@ -1,7 +1,7 @@
 package main;
 
 /**
- * A time stamp for time data in java.ca
+ * A time stamp for time data in java.class
  *
  * @author HongLIn  XiaomingSu
  * @version 1.0
